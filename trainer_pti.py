@@ -27,7 +27,7 @@ def main(
         str
     ] = "./cache",  # "stabilityai/stable-diffusion-xl-base-1.0",
     revision: Optional[str] = None,
-    instance_data_dir: Optional[str] = "./dataset/zeke/captions.csv",
+    instance_data_dir: Optional[str] = "caption.csv",
     output_dir: str = "ft_masked_coke",
     seed: Optional[int] = 42,
     resolution: int = 512,
@@ -194,7 +194,7 @@ def main(
     )
 
     print(f"# PTI : Loading dataset, do_cache {do_cache}")
-
+    print("instance data dir",instance_data_dir)
     train_dataset = PreprocessedDataset(
         instance_data_dir,
         tokenizer_one,

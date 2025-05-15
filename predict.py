@@ -35,7 +35,7 @@ LCM_CACHE = "./lcm-cache"
 SAFETY_CACHE = "./safety-cache"
 FEATURE_EXTRACTOR = "./feature-extractor"
 SDXL_URL = "https://weights.replicate.delivery/default/sdxl/sdxl-vae-upcast-fix.tar"
-SAFETY_URL = "https://weights.replicate.delivery/default/sdxl/safety-1.0.tar"
+SAFETY_URL = "https://huggingface.co/cagliostrolab/animagine-xl-3.0/resolve/main/animagine-xl-3.0.safetensors"
 
 
 class KarrasDPM:

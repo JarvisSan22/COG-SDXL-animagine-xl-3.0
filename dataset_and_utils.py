@@ -52,7 +52,7 @@ class PreprocessedDataset(Dataset):
         substitute_caption_map: Dict[str, str] = {},
     ):
         super().__init__()
-
+        print(csv_path)
         self.data = pd.read_csv(csv_path)
         self.csv_path = csv_path
 

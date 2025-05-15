@@ -90,6 +90,7 @@ def preprocess(
                     zip_info.filename = os.path.basename(zip_info.filename)
                     zip_ref.extract(zip_info, TEMP_IN_DIR)
                     caption_csv = os.path.join(TEMP_IN_DIR, zip_info.filename)
+                    print("csv file",caption_csv)
     elif input_images_filetype == "tar" or str(input_zip_path).endswith(".tar"):
         assert str(input_zip_path).endswith(
             ".tar"
@@ -580,7 +581,7 @@ def load_and_save_masks_and_captions(
 
     df = pd.DataFrame(columns=["image_path", "mask_path", "caption"], data=data)
     # save the dataframe to a CSV file
-    df.to_csv(os.path.join(output_dir, "captions.csv"), index=False)
+    df.to_csv(os.path.join(output_dir, "caption.csv"), index=False)
 
 
 def _find_files(pattern, dir="."):
